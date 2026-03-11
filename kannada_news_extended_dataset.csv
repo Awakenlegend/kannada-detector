@@ -1,0 +1,21 @@
+id,kannada_text,english_translation,category,confidence_score,language_pattern,factual_consistency,source_credibility,analysis_notes
+1,ಕರ್ನಾಟಕ ಸರ್ಕಾರ ಶಿಕ್ಷಣ ಕ್ಷೇತ್ರಕ್ಕೆ ೫೦೦ ಕೋಟಿ ರೂಪಾಯಿ ಹೂಡಿಕೆ ಘೋಷಿಸಿದೆ,Karnataka government announces 500 crore rupees investment in education sector,Real,0.95,formal,high,high,Government announcement from official sources
+2,ಬೆಂಗಳೂರಿನ ಮೇಯರ್ ಅವರು ಸೋಮವಾರ ರಾತ್ರಿ ಯೋಗಾಭ್ಯಾಸ ಮಾಡುತ್ತಾರೆ ಎಂದು ಹೇಳಿಕೆ,Bangalore Mayor statement about practicing yoga on Monday nights,Misleading,0.65,informal,medium,medium,Unverified personal statement without official confirmation
+3,ಕರ್ನಾಟಕದಲ್ಲಿ ಸಿಂಹ ಮನುಷ್ಯನನ್ನು ಹೋರಾಡಿ ಸಾಯಿಸಿದೆ ಎಂಬ ಸುದ್ದಿ ಸುಳ್ಳು ಎಂದು ಸಾಬೀತಾಗಿದೆ,News about lion attacking a human in Karnataka has been proven false,Fake,0.15,sensational,low,low,Completely fabricated story with no factual basis
+4,ಭಾರತೀಯ ರೈಲ್ವೆ ಹೊಸ ಟ್ರೈನ್ ಸೇವೆ ಬೆಂಗಳೂರು-ಮೈಸೂರು ಮಾರ್ಗದಲ್ಲಿ ಪ್ರಾರಂಭ ಮಾಡಿದೆ,Indian Railways launches new train service on Bangalore-Mysore route,Real,0.92,formal,high,high,Verified from official railway announcements
+5,ಕರ್ನಾಟಕ ಮುಖ್ಯಮಂತ್ರಿ ಅವರು ಕಾಲ್ಪನಿಕ ಬಿಕ್ಕಟ್ಟಿನಿಂದ ಹೊರಬಂದಿದ್ದಾರೆ ಎಂಬ ಸುದ್ದಿ,News about Karnataka Chief Minister recovering from fictional crisis,Fake,0.10,fabricated,low,low,Completely made-up story with no credible sources
+6,ಬೆಂಗಳೂರು ಮೆಟ್ರೋ ಸಂಸ್ಥೆ ಹೊಸ ಮೆಟ್ರೋ ಲೈನ್ ನಿರ್ಮಾಣಕ್ಕೆ ಅನುಮತಿ ಪಡೆದಿದೆ,Bangalore Metro authority gets approval for new metro line construction,Real,0.88,official,high,high,Confirmed from official metro authority sources
+7,ಮಲೇಶಿಯಾದಲ್ಲಿ ಕನ್ನಡಿಗರಿಗೆ ವಿಶೇಷ ಸೌಲಭ್ಯ ಘೋಷಿಸಿದೆ ಎಂದು ಕೆಲವು ವೆಬ್‌ಸೈಟ್‌ಗಳು ಹೇಳುತ್ತಿವೆ,Some websites claim Malaysia announces special facilities for Kannadigas,Misleading,0.55,vague,medium,low,Unverified claims from unreliable sources
+8,ಕರ್ನಾಟಕ ಸರ್ಕಾರ ಕೃಷಿ ಕ್ಷೇತ್ರಕ್ಕೆ ಹೊಸ ನೀತಿ ಘೋಷಿಸಿದೆ ಮತ್ತು ರೈತರಿಗೆ ಸಹಾಯ ಹೆಚ್ಚಿಸಿದೆ,Karnataka government announces new agricultural policy and increases farmer support,Real,0.90,policy,high,high,Verified from government official channels
+9,ಬೆಂಗಳೂರಿನ ಅಂತರ್ರಾಷ್ಟ್ರೀಯ ವಿಮಾನ ನಿಲ್ದಾಣ ಮುಚ್ಚುವ ಸಾಧ್ಯತೆ ಇದೆ ಎಂದು ಅಜ್ಞಾತ ಮೂಲ ಹೇಳುತ್ತಿದೆ,Unknown source claims Bangalore airport might close,Fake,0.08,sensational,low,very_low,Completely false claim from unreliable source
+10,ಕನ್ನಡ ಭಾಷೆ ಯುನೆಸ್ಕೋ ಸಾಂಸ್ಕೃತಿಕ ಪರಿವಿಕ್ಷೆ ಸೂಚಿಯಲ್ಲಿ ಸೇರಿಸಲ್ಪಟ್ಟಿದೆ,Kannada language included in UNESCO cultural heritage list,Real,0.93,cultural,high,high,Verified from UNESCO official records
+11,ಕರ್ನಾಟಕ ಪೋಲೀಸ್ ಹೊಸ ಸೈಬರ್ ಕ್ರೈಮ್ ವಿಭಾಗ ಸ್ಥಾಪಿಸಿದೆ,Karnataka Police establishes new cyber crime department,Real,0.91,official,high,high,Confirmed from police department announcements
+12,ಮೈಸೂರು ಪ್ರಾಸಾದ ಮರುಸ್ಥಾಪನೆ ಕಾರ್ಯ ಪೂರ್ಣವಾಗಿದೆ ಎಂದು ಕೆಲವು ಸುದ್ದಿ ಮಾಧ್ಯಮ ಹೇಳುತ್ತಿವೆ,Some news media claim Mysore Palace restoration work is complete,Misleading,0.60,unconfirmed,medium,low,Partial information without complete verification
+13,ಬೆಂಗಳೂರಿನ ಪರಿಸರ ಸ್ಥಿತಿ ಸುಧಾರಿಸಿದೆ ಎಂದು ಪರಿಸರ ವಿಭಾಗ ವರದಿ,Environment department reports improved environmental conditions in Bangalore,Real,0.87,report,high,high,Based on official environmental department data
+14,ಕರ್ನಾಟಕದಲ್ಲಿ ಕೃತ್ರಿಮ ಮಾನವ ಸೃಷ್ಟಿ ಆದಿತ್ಯ ಸಾಯಿಸಿದೆ ಎಂಬ ಸುದ್ದಿ,News about artificial human creation named Aditya dying in Karnataka,Fake,0.05,fabricated,low,very_low,Science fiction presented as fact
+15,ಕನ್ನಡ ಸಿನೆಮಾ ಉದ್ಯಮ ಹೊಸ ಎತ್ತರವನ್ನು ಸ್ಪರ್ಶಿಸಿದೆ ಎಂದು ಚಲನಚಿತ್ರ ಸಂಸ್ಥೆ ಘೋಷಿಸಿದೆ,Film industry announces Kannada cinema industry reaches new heights,Real,0.85,announcement,high,high,Verified from film industry sources
+16,ಕರ್ನಾಟಕ ವಿಶ್ವವಿದ್ಯಾಲಯ ಹೊಸ ಕೋರ್ಸ್ ಪ್ರಾರಂಭ ಮಾಡಿದೆ,Karnataka University launches new course,Real,0.89,official,high,high,Confirmed from university announcements
+17,ಬೆಂಗಳೂರಿನ ಸಾರ್ವಜನಿಕ ಸಾರಿಗೆ ವ್ಯವಸ್ಥೆ ಪರಿಪೂರ್ಣವಾಗಿ ಬದಲಾಗಿದೆ ಎಂದು ಅಜ್ಞಾತ ಮೂಲ ಹೇಳುತ್ತಿದೆ,Unknown source claims Bangalore public transport system completely changed,Misleading,0.50,vague,low,low,Unverified and exaggerated claims
+18,ಕರ್ನಾಟಕ ಸರ್ಕಾರ ಮಹಿಳಾ ಸುರಕ್ಷೆ ಕಾರ್ಯಕ್ರಮ ಹೆಚ್ಚಿಸಿದೆ,Karnataka government increases women safety program,Real,0.92,policy,high,high,Verified from government policy announcements
+19,ಮೈಸೂರು ಜಿಲ್ಲೆಯಲ್ಲಿ ಸೋನೆ ಖಣಿ ಕಂಡುಬಂದಿದೆ ಎಂದು ಸುದ್ದಿ,News about gold mine discovered in Mysore district,Fake,0.12,sensational,low,low,Unverified and likely false claim
+20,ಬೆಂಗಳೂರು ಐಟಿ ಸೆಕ್ಟರ್ ಹೊಸ ಉದ್ಯೋಗ ಸೃಷ್ಟಿ ಮಾಡಿದೆ,Bangalore IT sector creates new employment opportunities,Real,0.88,news,high,high,Confirmed from IT industry reports

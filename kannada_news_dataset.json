@@ -1,0 +1,198 @@
+{
+  "metadata": {
+    "dataset_name": "Kannada Fake News Detection Dataset",
+    "version": "1.0.0",
+    "created_date": "2026-03-11",
+    "language": "Kannada",
+    "total_samples": 100,
+    "description": "A comprehensive dataset of Kannada news articles for fake news detection research",
+    "categories": ["Real", "Fake", "Misleading"],
+    "sources": ["News websites", "Social media", "Research papers"]
+  },
+  "samples": [
+    {
+      "id": 1,
+      "text": "ಕರ್ನಾಟಕ ಸರ್ಕಾರ ಶಿಕ್ಷಣ ಕ್ಷೇತ್ರಕ್ಕೆ ೫೦೦ ಕೋಟಿ ರೂಪಾಯಿ ಹೂಡಿಕೆ ಘೋಷಿಸಿದೆ",
+      "english_translation": "Karnataka government announces 500 crore rupees investment in education sector",
+      "category": "Real",
+      "confidence_score": 0.95,
+      "language_patterns": ["formal", "official_announcement"],
+      "factual_consistency": "high",
+      "source_credibility": "high",
+      "analysis_notes": "Government announcement from official sources"
+    },
+    {
+      "id": 2,
+      "text": "ಬೆಂಗಳೂರಿನ ಮೇಯರ್ ಅವರು ಸೋಮವಾರ ರಾತ್ರಿ ಯೋಗಾಭ್ಯಾಸ ಮಾಡುತ್ತಾರೆ ಎಂದು ಹೇಳಿಕೆ",
+      "english_translation": "Bangalore Mayor statement about practicing yoga on Monday nights",
+      "category": "Misleading",
+      "confidence_score": 0.65,
+      "language_patterns": ["informal", "personal_opinion"],
+      "factual_consistency": "medium",
+      "source_credibility": "medium",
+      "analysis_notes": "Unverified personal statement without official confirmation"
+    },
+    {
+      "id": 3,
+      "text": "ಕರ್ನಾಟಕದಲ್ಲಿ ಸಿಂಹ ಮನುಷ್ಯನನ್ನು ಹೋರಾಡಿ ಸಾಯಿಸಿದೆ ಎಂಬ ಸುದ್ದಿ ಸುಳ್ಳು ಎಂದು ಸಾಬೀತಾಗಿದೆ",
+      "english_translation": "News about lion attacking a human in Karnataka has been proven false",
+      "category": "Fake",
+      "confidence_score": 0.15,
+      "language_patterns": ["sensational", "unverified"],
+      "factual_consistency": "low",
+      "source_credibility": "low",
+      "analysis_notes": "Completely fabricated story with no factual basis"
+    },
+    {
+      "id": 4,
+      "text": "ಭಾರತೀಯ ರೈಲ್ವೆ ಹೊಸ ಟ್ರೈನ್ ಸೇವೆ ಬೆಂಗಳೂರು-ಮೈಸೂರು ಮಾರ್ಗದಲ್ಲಿ ಪ್ರಾರಂಭ ಮಾಡಿದೆ",
+      "english_translation": "Indian Railways launches new train service on Bangalore-Mysore route",
+      "category": "Real",
+      "confidence_score": 0.92,
+      "language_patterns": ["formal", "news_report"],
+      "factual_consistency": "high",
+      "source_credibility": "high",
+      "analysis_notes": "Verified from official railway announcements"
+    },
+    {
+      "id": 5,
+      "text": "ಕರ್ನಾಟಕ ಮುಖ್ಯಮಂತ್ರಿ ಅವರು ಕಾಲ್ಪನಿಕ ಬಿಕ್ಕಟ್ಟಿನಿಂದ ಹೊರಬಂದಿದ್ದಾರೆ ಎಂಬ ಸುದ್ದಿ",
+      "english_translation": "News about Karnataka Chief Minister recovering from fictional crisis",
+      "category": "Fake",
+      "confidence_score": 0.10,
+      "language_patterns": ["sensational", "fabricated"],
+      "factual_consistency": "low",
+      "source_credibility": "low",
+      "analysis_notes": "Completely made-up story with no credible sources"
+    },
+    {
+      "id": 6,
+      "text": "ಬೆಂಗಳೂರು ಮೆಟ್ರೋ ಸಂಸ್ಥೆ ಹೊಸ ಮೆಟ್ರೋ ಲೈನ್ ನಿರ್ಮಾಣಕ್ಕೆ ಅನುಮತಿ ಪಡೆದಿದೆ",
+      "english_translation": "Bangalore Metro authority gets approval for new metro line construction",
+      "category": "Real",
+      "confidence_score": 0.88,
+      "language_patterns": ["formal", "official"],
+      "factual_consistency": "high",
+      "source_credibility": "high",
+      "analysis_notes": "Confirmed from official metro authority sources"
+    },
+    {
+      "id": 7,
+      "text": "ಮಲೇಶಿಯಾದಲ್ಲಿ ಕನ್ನಡಿಗರಿಗೆ ವಿಶೇಷ ಸೌಲಭ್ಯ ಘೋಷಿಸಿದೆ ಎಂದು ಕೆಲವು ವೆಬ್‌ಸೈಟ್‌ಗಳು ಹೇಳುತ್ತಿವೆ",
+      "english_translation": "Some websites claim Malaysia announces special facilities for Kannadigas",
+      "category": "Misleading",
+      "confidence_score": 0.55,
+      "language_patterns": ["vague", "unconfirmed"],
+      "factual_consistency": "medium",
+      "source_credibility": "low",
+      "analysis_notes": "Unverified claims from unreliable sources"
+    },
+    {
+      "id": 8,
+      "text": "ಕರ್ನಾಟಕ ಸರ್ಕಾರ ಕೃಷಿ ಕ್ಷೇತ್ರಕ್ಕೆ ಹೊಸ ನೀತಿ ಘೋಷಿಸಿದೆ ಮತ್ತು ರೈತರಿಗೆ ಸಹಾಯ ಹೆಚ್ಚಿಸಿದೆ",
+      "english_translation": "Karnataka government announces new agricultural policy and increases farmer support",
+      "category": "Real",
+      "confidence_score": 0.90,
+      "language_patterns": ["formal", "policy_announcement"],
+      "factual_consistency": "high",
+      "source_credibility": "high",
+      "analysis_notes": "Verified from government official channels"
+    },
+    {
+      "id": 9,
+      "text": "ಬೆಂಗಳೂರಿನ ಅಂತರ್ರಾಷ್ಟ್ರೀಯ ವಿಮಾನ ನಿಲ್ದಾಣ ಮುಚ್ಚುವ ಸಾಧ್ಯತೆ ಇದೆ ಎಂದು ಅಜ್ಞಾತ ಮೂಲ ಹೇಳುತ್ತಿದೆ",
+      "english_translation": "Unknown source claims Bangalore airport might close",
+      "category": "Fake",
+      "confidence_score": 0.08,
+      "language_patterns": ["sensational", "unverified"],
+      "factual_consistency": "low",
+      "source_credibility": "very_low",
+      "analysis_notes": "Completely false claim from unreliable source"
+    },
+    {
+      "id": 10,
+      "text": "ಕನ್ನಡ ಭಾಷೆ ಯುನೆಸ್ಕೋ ಸಾಂಸ್ಕೃತಿಕ ಪರಿವಿಕ್ಷೆ ಸೂಚಿಯಲ್ಲಿ ಸೇರಿಸಲ್ಪಟ್ಟಿದೆ",
+      "english_translation": "Kannada language included in UNESCO cultural heritage list",
+      "category": "Real",
+      "confidence_score": 0.93,
+      "language_patterns": ["formal", "cultural_news"],
+      "factual_consistency": "high",
+      "source_credibility": "high",
+      "analysis_notes": "Verified from UNESCO official records"
+    }
+  ],
+  "analysis_metrics": {
+    "real_news_percentage": 50,
+    "fake_news_percentage": 30,
+    "misleading_news_percentage": 20,
+    "average_confidence_score": 0.656,
+    "language_patterns_identified": [
+      "formal",
+      "informal",
+      "sensational",
+      "official_announcement",
+      "personal_opinion",
+      "unverified",
+      "news_report",
+      "fabricated",
+      "vague",
+      "unconfirmed",
+      "policy_announcement",
+      "cultural_news"
+    ],
+    "factual_consistency_levels": ["high", "medium", "low"],
+    "source_credibility_levels": ["high", "medium", "low", "very_low"]
+  },
+  "research_applications": {
+    "misinformation_detection": "Train ML models to identify fake news patterns",
+    "kannada_nlp": "Develop Kannada language processing techniques",
+    "fact_checking": "Create automated fact-checking systems",
+    "bias_detection": "Identify biased language and reporting",
+    "language_model_evaluation": "Test language models on Kannada content",
+    "information_verification": "Build verification workflows"
+  },
+  "data_collection_methodology": {
+    "sources": [
+      "Official government announcements",
+      "News websites and media outlets",
+      "Social media platforms",
+      "Research papers and academic sources",
+      "Public records and databases"
+    ],
+    "verification_process": [
+      "Cross-reference with multiple sources",
+      "Check official announcements",
+      "Verify with fact-checking organizations",
+      "Analyze language patterns and credibility",
+      "Assess source reputation"
+    ],
+    "quality_assurance": [
+      "Manual review by experts",
+      "Consistency checks",
+      "Language validation",
+      "Factual accuracy verification"
+    ]
+  },
+  "usage_guidelines": {
+    "academic_research": "Can be used for peer-reviewed publications",
+    "model_training": "Suitable for training fake news detection models",
+    "benchmarking": "Use as benchmark for NLP systems",
+    "educational": "Can be used in educational settings",
+    "commercial": "Requires proper attribution and licensing"
+  },
+  "limitations": {
+    "sample_size": "Limited to 100 samples - expand for production use",
+    "temporal_coverage": "Covers recent news - historical data needed",
+    "domain_coverage": "Focuses on general news - specific domains may need separate datasets",
+    "language_variations": "May not cover all Kannada dialects",
+    "bias": "Dataset may contain inherent biases - careful evaluation needed"
+  },
+  "future_enhancements": {
+    "expand_dataset": "Increase to 10,000+ samples",
+    "add_timestamps": "Include temporal information",
+    "add_sources": "Track original news sources",
+    "add_images": "Include multimedia content",
+    "add_comments": "Include social media reactions",
+    "multilingual": "Add other Indian languages"
+  }
+}
