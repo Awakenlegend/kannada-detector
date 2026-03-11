@@ -1,14 +1,15 @@
-# Kannada Detector
+# Kannada Fake News Detector
 
-An AI-powered **Kannada Language Detection and Translation System** built using **FastAPI and Streamlit**.
+An AI-powered **Fake News Detection System for Kannada language** built using **FastAPI and Streamlit**.
 
-This project focuses on **fine-tuning existing multilingual models such as IndicBERT and IndicTrans2** to improve Kannada language detection and translation performance.
+This project focuses on **fine-tuning the IndicBERT model** to classify Kannada news articles as **Real or Fake**.
+Instead of training a model from scratch, we adapt a powerful **pre-trained Indic language model** and fine-tune it using Kannada news datasets.
 
-Instead of training models from scratch, we adapt and fine-tune powerful **pre-trained Indic language models** using Kannada datasets and integrate them into a scalable web system.
+The system provides a **web interface and API** where users can input Kannada text and receive a prediction indicating whether the news is **fake or real**.
 
 ---
 
-## Live Demo
+# Live Demo
 
 Try the deployed application:
 
@@ -16,98 +17,98 @@ https://kannadadetector-igbkcjph.manus.space/
 
 ---
 
-## Features
+# Features
 
-* Kannada language detection
-* Kannada ↔ English translation
-* Support for romanized Kannada input
-* AI-powered NLP system using fine-tuned models
-* FastAPI backend for scalable APIs
-* Interactive Streamlit web interface
-* Support for Kannada text processing
-
----
-
-## Project Contribution
-
-This project does not build large language models from scratch.
-Instead, the main contribution is **fine-tuning and adapting state-of-the-art multilingual models for Kannada NLP tasks**.
-
-Our contributions include:
-
-* Fine-tuning **IndicBERT** for better Kannada language understanding
-* Fine-tuning **IndicTrans2** for improved Kannada translation
-* Building a scalable **FastAPI backend**
-* Developing a **Streamlit-based frontend**
-* Integrating the models into a real-world Kannada NLP system
+* Fake news detection for Kannada text
+* Fine-tuned **IndicBERT model for Kannada NLP tasks**
+* FastAPI backend for prediction APIs
+* Streamlit frontend for user interaction
+* Real-time classification of news content
+* Supports Kannada news articles and social media text
 
 ---
 
-## System Architecture
+# Project Contribution
+
+This project does not build a language model from scratch.
+Instead, the key contribution is **fine-tuning a state-of-the-art Indic language model (IndicBERT)** specifically for **Kannada fake news classification**.
+
+Our work focuses on:
+
+* Fine-tuning **IndicBERT** for Kannada fake news detection
+* Building a **machine learning pipeline** for text classification
+* Creating a **FastAPI-based backend for model inference**
+* Developing a **Streamlit-based interactive frontend**
+* Integrating the model into a **real-world web application**
+
+---
+
+# System Architecture
 
 ```
-User Input
-↓
-Streamlit Frontend
-↓
+User Input (Kannada News Text)
+        ↓
+Streamlit Web Interface
+        ↓
 FastAPI Backend
-↓
-Language Detection
-↓
-Fine-tuned NLP Models
-├── IndicBERT
-└── IndicTrans2
-↓
-Translation Output
+        ↓
+Text Preprocessing
+        ↓
+Fine-tuned IndicBERT Model
+        ↓
+Fake News Classification
+        ↓
+Prediction Output (Fake / Real)
 ```
 
 ---
 
-## Tech Stack
+# Tech Stack
 
-### Backend
+## Backend
 
 * Python
 * FastAPI
 * HuggingFace Transformers
 * PyTorch
 
-### Frontend
+## Frontend
 
 * Streamlit
 
-### Models
+## Model
 
-* **IndicBERT (AI4Bharat)** – Fine-tuned for Kannada language understanding
-* **IndicTrans2** – Fine-tuned for Kannada translation tasks
+* **IndicBERT (AI4Bharat)** – Fine-tuned for Kannada fake news classification
 
-### Libraries
+## Libraries
 
-* langdetect
-* indic-transliteration
 * transformers
 * torch
+* scikit-learn
+* pandas
+* numpy
 
 ---
 
-## Project Structure
+# Project Structure
 
 ```
 kannada-detector/
 │
 ├── backend/
 │   ├── main.py
-│   ├── detection.py
-│   ├── translation.py
+│   ├── model.py
+│   ├── predict.py
 │   └── requirements.txt
 │
 ├── frontend/
 │   └── app.py
 │
 ├── datasets/
-│   └── kannada_dataset.json
+│   └── kannada_fake_news_dataset.csv
 │
 ├── models/
+│   └── finetuned_indicbert/
 │
 ├── screenshots/
 │
@@ -116,9 +117,9 @@ kannada-detector/
 
 ---
 
-## Installation
+# Installation
 
-### Clone the Repository
+## Clone the Repository
 
 ```
 git clone https://github.com/Awakenlegend/kannada-detector.git
@@ -127,16 +128,16 @@ cd kannada-detector
 
 ---
 
-### Create Environment (Conda)
+## Create Environment (Conda)
 
 ```
-conda create -n kannada-nlp python=3.11 -y
-conda activate kannada-nlp
+conda create -n kannada-ai python=3.11 -y
+conda activate kannada-ai
 ```
 
 ---
 
-### Alternative (Without Conda)
+## Alternative (Without Conda)
 
 ```
 python -m venv venv
@@ -151,7 +152,7 @@ venv\Scripts\activate
 
 ---
 
-### Install Dependencies
+## Install Dependencies
 
 ```
 pip install -r requirements.txt
@@ -159,7 +160,7 @@ pip install -r requirements.txt
 
 ---
 
-## Run the Backend (FastAPI)
+# Run the Backend (FastAPI)
 
 ```
 cd backend
@@ -172,7 +173,7 @@ Backend will run at:
 http://127.0.0.1:8000
 ```
 
-API Documentation:
+API documentation:
 
 ```
 http://127.0.0.1:8000/docs
@@ -180,108 +181,83 @@ http://127.0.0.1:8000/docs
 
 ---
 
-## Run the Frontend (Streamlit)
+# Run the Frontend (Streamlit)
 
 ```
 cd frontend
 streamlit run app.py
 ```
 
-The web application will open automatically in your browser.
+The web application will open in your browser.
 
 ---
 
-## API Endpoints
+# API Endpoint
 
-### Language Detection
+## Fake News Detection
 
 ```
-POST /detect
+POST /predict
 ```
 
-Example Request:
+Example Request
 
 ```
 {
-"text": "ನಮಸ್ಕಾರ"
+"text": "ಈ ಸುದ್ದಿ ನಿಜವಲ್ಲ ಎಂದು ಹೇಳಲಾಗುತ್ತಿದೆ"
 }
 ```
 
-Example Response:
+Example Response
 
 ```
 {
-"language": "Kannada"
-}
-```
-
----
-
-### Translation
-
-```
-POST /translate
-```
-
-Example Request:
-
-```
-{
-"text": "ನಮಸ್ಕಾರ",
-"target_language": "English"
-}
-```
-
-Example Response:
-
-```
-{
-"translation": "Hello"
+"prediction": "Fake News"
 }
 ```
 
 ---
 
-## Example Use Cases
+# Example Use Cases
 
-* Fake news detection systems for Kannada media
-* Multilingual chatbots
-* Kannada translation tools
-* Educational language learning platforms
-* Government service portals supporting regional languages
+* Detecting fake news in Kannada social media
+* Fact-checking Kannada news articles
+* News verification tools for journalists
+* Government misinformation monitoring systems
+* AI-powered Kannada media analysis
 
 ---
 
-## Screenshots
+# Screenshots
 
-Add screenshots of your application here.
+Add screenshots of the application interface.
 
 Example:
 
 ```
 screenshots/homepage.png
-screenshots/translation.png
+screenshots/prediction.png
 ```
 
 ---
 
-## Future Improvements
+# Future Improvements
 
-* Kannada speech-to-text integration
-* Fake news detection for Kannada articles
+* Larger Kannada fake news dataset
+* Multi-language fake news detection
+* Integration with social media platforms
+* Real-time news monitoring system
 * Mobile application support
-* Support for more Indic languages
-* Further model fine-tuning with larger datasets
 
 ---
 
-## Contributors
+# Contributors
 
 Mohammed Farhan
 BTech AI & ML Engineering Student
 
 ---
 
-## License
+# License
 
 This project is licensed under the **MIT License**.
