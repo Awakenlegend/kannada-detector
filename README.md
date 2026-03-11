@@ -1,289 +1,287 @@
-# Kannada Fake News Detector
+# Kannada Detector
 
-A full-stack AI-powered web application for detecting fake news in Kannada language using advanced natural language processing and machine learning techniques.
+An AI-powered **Kannada Language Detection and Translation System** built using **FastAPI and Streamlit**.
 
-## 🎯 Overview
+This project focuses on **fine-tuning existing multilingual models such as IndicBERT and IndicTrans2** to improve Kannada language detection and translation performance.
 
-The Kannada Fake News Detector is a research-focused application designed to help identify misinformation and fake news content in Kannada, one of India's major languages. It leverages OpenAI's language models combined with custom analysis tools to provide comprehensive verification of news content.
-
-## ✨ Key Features
-
-- **Kannada Text Analysis**: Specialized processing for Kannada language content
-- **AI-Powered Verification**: Uses OpenAI GPT models for intelligent analysis
-- **Multi-Factor Analysis**:
-  - Language pattern detection
-  - Factual consistency checking
-  - Source credibility assessment
-  - Confidence scoring
-- **User Authentication**: Secure OAuth-based login system
-- **Real-time Streaming**: Live feedback during analysis
-- **Responsive Design**: Works seamlessly on desktop and mobile devices
-- **Type-Safe**: Built with TypeScript for reliability
-
-## 🛠️ Technology Stack
-
-### Frontend
-- React 19.2.1
-- TypeScript 5.9.3
-- Vite 7.1.7
-- TailwindCSS 4.1.14
-- React Hook Form
-- Zod (validation)
-- Recharts (visualization)
-
-### Backend
-- Node.js 22.13.0
-- Express 4.21.2
-- tRPC 11.6.0
-- Drizzle ORM 0.44.5
-- MySQL 8.0+
-
-### AI/ML
-- OpenAI API (@ai-sdk/openai)
-- AI SDK (streaming & tool calling)
-- Custom NLP tools
-
-## 📋 Project Structure
-
-```
-kannada-detector/
-├── client/                    # React frontend
-│   ├── src/
-│   │   ├── pages/            # Page components
-│   │   ├── components/       # Reusable UI components
-│   │   ├── _core/            # Core hooks and utilities
-│   │   └── contexts/         # React contexts
-│   └── public/               # Static assets
-├── server/                    # Express backend
-│   ├── _core/                # Core server logic
-│   │   ├── index.ts          # Server entry point
-│   │   ├── chat.ts           # AI chat endpoint
-│   │   ├── oauth.ts          # Authentication
-│   │   └── ...               # Other utilities
-│   ├── routers/              # tRPC routers
-│   └── db.ts                 # Database functions
-├── drizzle/                   # Database schema
-│   └── schema.ts             # Table definitions
-├── shared/                    # Shared types
-└── package.json              # Dependencies
-```
-
-## 🚀 Getting Started
-
-### Prerequisites
-- Node.js 22.13.0+
-- pnpm 10.4.1+
-- MySQL 8.0+
-- OpenAI API key
-
-### Installation
-
-1. **Clone the repository**
-```bash
-git clone https://github.com/yourusername/kannada-detector.git
-cd kannada-detector
-```
-
-2. **Install dependencies**
-```bash
-pnpm install
-```
-
-3. **Set up environment variables**
-Create a `.env` file in the root directory:
-```env
-DATABASE_URL=mysql://user:password@localhost:3306/kannada_detector
-OPENAI_API_KEY=sk-your-api-key
-OPENAI_API_BASE_URL=https://api.openai.com/v1
-JWT_SECRET=your-secret-key-here
-OAUTH_SERVER_URL=https://oauth.example.com
-VITE_OAUTH_PORTAL_URL=https://portal.example.com
-```
-
-4. **Set up the database**
-```bash
-pnpm run db:push
-```
-
-5. **Start development server**
-```bash
-pnpm run dev
-```
-
-The application will be available at `http://localhost:3000`
-
-## 📚 API Documentation
-
-### Chat Endpoint
-**POST /api/chat**
-
-Stream AI responses with tool calling support.
-
-**Request:**
-```json
-{
-  "messages": [
-    {
-      "role": "user",
-      "content": "ಇದು ನಿಜವಾದ ಸುದ್ದಿಯೇ? (Is this real news?)"
-    }
-  ]
-}
-```
-
-**Response:** Server-sent events with streaming text and tool calls
-
-### OAuth Callback
-**GET /api/oauth/callback**
-
-Handles OAuth authentication callback.
-
-### tRPC API
-**POST /api/trpc**
-
-Type-safe RPC calls for data operations.
-
-## 🔐 Security Features
-
-- JWT-based authentication
-- Secure cookie handling
-- CORS protection
-- Input validation with Zod
-- SQL injection prevention via ORM
-- Environment variable protection
-- Secure OAuth flow
-
-## 📊 Database Schema
-
-### Users Table
-```sql
-CREATE TABLE users (
-  id INT AUTO_INCREMENT PRIMARY KEY,
-  openId VARCHAR(64) UNIQUE NOT NULL,
-  name TEXT,
-  email VARCHAR(320),
-  loginMethod VARCHAR(64),
-  role ENUM('user', 'admin') DEFAULT 'user',
-  createdAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-  updatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  lastSignedIn TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-);
-```
-
-## 🧪 Testing
-
-Run tests with:
-```bash
-pnpm run test
-```
-
-## 📝 Code Quality
-
-Format code:
-```bash
-pnpm run format
-```
-
-Type check:
-```bash
-pnpm run check
-```
-
-## 🏗️ Build & Deployment
-
-### Development Build
-```bash
-pnpm run dev
-```
-
-### Production Build
-```bash
-pnpm run build
-```
-
-### Start Production Server
-```bash
-pnpm run start
-```
-
-## 📈 Performance Optimizations
-
-- Vite for fast builds and HMR
-- React Query for efficient data fetching
-- Streaming responses for real-time feedback
-- TailwindCSS for optimized styling
-- Code splitting and lazy loading
-- Efficient database queries with Drizzle ORM
-
-## 🔄 Authentication Flow
-
-1. User clicks "Sign In"
-2. Redirected to OAuth provider
-3. OAuth callback to `/api/oauth/callback`
-4. User data stored in database
-5. JWT token issued
-6. User authenticated for API calls
-
-## 📊 Analysis Pipeline
-
-```
-User Input (Kannada Text)
-        ↓
-Text Preprocessing
-        ↓
-Language Pattern Analysis
-        ↓
-AI Model Processing (OpenAI)
-        ↓
-Factual Consistency Check
-        ↓
-Source Credibility Assessment
-        ↓
-Confidence Scoring
-        ↓
-Results & Visualization
-```
-
-## 🎓 Research Applications
-
-This project can be used for:
-- Misinformation detection research
-- Kannada NLP studies
-- Fact-checking system development
-- Bias detection in news
-- Language model evaluation
-- Information verification workflows
-
-## 📄 License
-
-MIT License - See LICENSE file for details
-
-## 👥 Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-## 📧 Contact
-
-For research inquiries and collaborations, please contact the development team.
-
-## 🙏 Acknowledgments
-
-- OpenAI for GPT models
-- Drizzle ORM for database management
-- React and TypeScript communities
-- Manus platform for hosting and infrastructure
-
-## 📚 References
-
-- [OpenAI API Documentation](https://platform.openai.com/docs)
-- [Drizzle ORM](https://orm.drizzle.team/)
-- [tRPC Documentation](https://trpc.io/)
-- [React Documentation](https://react.dev/)
-- [Express.js Guide](https://expressjs.com/)
+Instead of training models from scratch, we adapt and fine-tune powerful **pre-trained Indic language models** using Kannada datasets and integrate them into a scalable web system.
 
 ---
 
-**Last Updated**: March 11, 2026
-**Version**: 1.0.0
-**Status**: Active Development
-# kannada-detector
+## Live Demo
+
+Try the deployed application:
+
+https://kannadadetector-igbkcjph.manus.space/
+
+---
+
+## Features
+
+* Kannada language detection
+* Kannada ↔ English translation
+* Support for romanized Kannada input
+* AI-powered NLP system using fine-tuned models
+* FastAPI backend for scalable APIs
+* Interactive Streamlit web interface
+* Support for Kannada text processing
+
+---
+
+## Project Contribution
+
+This project does not build large language models from scratch.
+Instead, the main contribution is **fine-tuning and adapting state-of-the-art multilingual models for Kannada NLP tasks**.
+
+Our contributions include:
+
+* Fine-tuning **IndicBERT** for better Kannada language understanding
+* Fine-tuning **IndicTrans2** for improved Kannada translation
+* Building a scalable **FastAPI backend**
+* Developing a **Streamlit-based frontend**
+* Integrating the models into a real-world Kannada NLP system
+
+---
+
+## System Architecture
+
+```
+User Input
+↓
+Streamlit Frontend
+↓
+FastAPI Backend
+↓
+Language Detection
+↓
+Fine-tuned NLP Models
+├── IndicBERT
+└── IndicTrans2
+↓
+Translation Output
+```
+
+---
+
+## Tech Stack
+
+### Backend
+
+* Python
+* FastAPI
+* HuggingFace Transformers
+* PyTorch
+
+### Frontend
+
+* Streamlit
+
+### Models
+
+* **IndicBERT (AI4Bharat)** – Fine-tuned for Kannada language understanding
+* **IndicTrans2** – Fine-tuned for Kannada translation tasks
+
+### Libraries
+
+* langdetect
+* indic-transliteration
+* transformers
+* torch
+
+---
+
+## Project Structure
+
+```
+kannada-detector/
+│
+├── backend/
+│   ├── main.py
+│   ├── detection.py
+│   ├── translation.py
+│   └── requirements.txt
+│
+├── frontend/
+│   └── app.py
+│
+├── datasets/
+│   └── kannada_dataset.json
+│
+├── models/
+│
+├── screenshots/
+│
+└── README.md
+```
+
+---
+
+## Installation
+
+### Clone the Repository
+
+```
+git clone https://github.com/Awakenlegend/kannada-detector.git
+cd kannada-detector
+```
+
+---
+
+### Create Environment (Conda)
+
+```
+conda create -n kannada-nlp python=3.11 -y
+conda activate kannada-nlp
+```
+
+---
+
+### Alternative (Without Conda)
+
+```
+python -m venv venv
+source venv/bin/activate
+```
+
+For Windows:
+
+```
+venv\Scripts\activate
+```
+
+---
+
+### Install Dependencies
+
+```
+pip install -r requirements.txt
+```
+
+---
+
+## Run the Backend (FastAPI)
+
+```
+cd backend
+uvicorn main:app --reload
+```
+
+Backend will run at:
+
+```
+http://127.0.0.1:8000
+```
+
+API Documentation:
+
+```
+http://127.0.0.1:8000/docs
+```
+
+---
+
+## Run the Frontend (Streamlit)
+
+```
+cd frontend
+streamlit run app.py
+```
+
+The web application will open automatically in your browser.
+
+---
+
+## API Endpoints
+
+### Language Detection
+
+```
+POST /detect
+```
+
+Example Request:
+
+```
+{
+"text": "ನಮಸ್ಕಾರ"
+}
+```
+
+Example Response:
+
+```
+{
+"language": "Kannada"
+}
+```
+
+---
+
+### Translation
+
+```
+POST /translate
+```
+
+Example Request:
+
+```
+{
+"text": "ನಮಸ್ಕಾರ",
+"target_language": "English"
+}
+```
+
+Example Response:
+
+```
+{
+"translation": "Hello"
+}
+```
+
+---
+
+## Example Use Cases
+
+* Fake news detection systems for Kannada media
+* Multilingual chatbots
+* Kannada translation tools
+* Educational language learning platforms
+* Government service portals supporting regional languages
+
+---
+
+## Screenshots
+
+Add screenshots of your application here.
+
+Example:
+
+```
+screenshots/homepage.png
+screenshots/translation.png
+```
+
+---
+
+## Future Improvements
+
+* Kannada speech-to-text integration
+* Fake news detection for Kannada articles
+* Mobile application support
+* Support for more Indic languages
+* Further model fine-tuning with larger datasets
+
+---
+
+## Contributors
+
+Mohammed Farhan
+BTech AI & ML Engineering Student
+
+---
+
+## License
+
+This project is licensed under the **MIT License**.
